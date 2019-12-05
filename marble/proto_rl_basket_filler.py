@@ -2,8 +2,8 @@ import random
 
 import numpy as np
 
-from marble.MarblePumper import MarblePumper
-from marble.Basket import Basket
+from marble.marble_pumper import MarblePumper
+from marble.basket import Basket
 
 
 class ProtoRLBasketFiller:
@@ -22,9 +22,9 @@ class ProtoRLBasketFiller:
         Initializes the BasketFiller
 
         Parameters:
-        basket_size (int): Size of the Basketpumper_number_basket
+        basket_size (int): Size of the Basket
         pumper_number (int): Number of Marble Pumpers
-        exploitation_percentage (int): Rate off exploitatioPUMPER_NUMBERn vs exploration of the algorithm
+        exploitation_percentage (int): Rate off exploitation vs exploration of the algorithm
         """
         self._basket = Basket(basket_size)
         self._basket_size = basket_size
@@ -53,7 +53,7 @@ class ProtoRLBasketFiller:
                 # Exploits: Gets the Pumper with max average of Marbles
                 choice = np.argmax(self._past_rewards_avg)
             else:
-                # Explores: Gets one Pumper randomlys
+                # Explores: Gets one Pumper randomly
                 choice = random.randrange(self._pumper_number)
 
             # Gets the Marbles from the Pumper

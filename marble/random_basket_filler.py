@@ -1,7 +1,7 @@
 import random
 
-from marble.Basket import Basket
-from marble.MarblePumper import MarblePumper
+from marble.basket import Basket
+from marble.marble_pumper import MarblePumper
 
 
 class RandomBasketFiller:

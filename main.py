@@ -1,8 +1,8 @@
 import numpy as np
 
-from marble.BasketFillerEvaluator import BasketFillerEvaluator
-from marble.ProtoRLBasketFiller import ProtoRLBasketFiller
-from marble.RandomBasketFiller import RandomBasketFiller
+from marble.basket_filler_evaluator import BasketFillerEvaluator
+from marble.proto_rl_basket_filler import ProtoRLBasketFiller
+from marble.random_basket_filler import RandomBasketFiller
 
 BASKET_SIZE = 50000
 PUMPER_NUMBER = 100
